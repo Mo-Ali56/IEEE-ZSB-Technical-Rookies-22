@@ -1,0 +1,8 @@
+print("enter the height")
+x=int(input())
+print("enter the width")
+y=int(input())
+area = x*y
+perimeter = (x + y )*2
+print("the area is  ", area)
+print("the perimeter is  ", perimeter)
