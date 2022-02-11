@@ -1,0 +1,8 @@
+print("please enter the num")
+x = int(input())
+y =0
+while  ( x>0 ):
+    y= y+x
+    x-=1
+   
+print("the sum is ",y)
