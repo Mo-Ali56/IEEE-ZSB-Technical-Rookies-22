@@ -1,0 +1,13 @@
+print("I will memorize a number and you will guess it")
+import random
+y = random . randint (1,10)
+z=1
+x = int(input())
+while x!=y :
+    print("incorrect guess")
+    print("try again")
+    x = int(input())
+    z+=1
+else :
+     print("correct guess the num is  " ,y)
+     print ("number of tries is " , z)
