@@ -1,0 +1,5 @@
+x=input(" please enter numbers with space between each num: ")
+y=x.split()
+y.sort()
+print(" The maximum score is  :  ",y[-1])
+print(" the second maximum score is  :",y[-2])
