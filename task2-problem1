@@ -1,0 +1,8 @@
+print("enter the num")
+x = int(input())
+for y in range(2, x):
+       for z in range(2, y):
+           if (y % z) == 0:
+               break
+       else:
+           print(y , end=" ")
