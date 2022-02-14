@@ -1,0 +1,10 @@
+print("aya 90 70 80\n""yhia 20 30 40\n""abdo 60 70 80")
+studata={"aya":[90,70,80],"yhia":[20,30,40],"abdo":[60,70,80]}
+print("Choose a name from these names")
+x=input()
+if (x=="aya") or (x=="yhia") or (x=="abdo"):
+    key=studata[x]
+    average= sum(key)/len(key)
+    print(average)
+else:
+    print("Please try again and write the name correctly")   
