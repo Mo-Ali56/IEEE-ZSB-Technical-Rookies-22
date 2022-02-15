@@ -1,0 +1,10 @@
+print("write the str to test if it palindrome or not ")
+x=input()
+while(x!="end"):
+    y=x[::-1]
+    if (y==x):
+        print("it's a palindrome")
+    else :
+        print("it's not a palindrome") 
+    print("write end to end or another str to test: ") 
+    x=input()    
