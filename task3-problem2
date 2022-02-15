@@ -1,0 +1,4 @@
+X = input("please enter numbers with space between each num: ")
+list = X.split()
+list2= set(list)  
+print(list2)
