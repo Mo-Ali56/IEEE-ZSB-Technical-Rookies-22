@@ -1,0 +1,10 @@
+X = input("please enter numbers with space between each num: ")
+list = X.split()
+output = []
+s = 0
+for num1 in range(0,len(list)):
+    for num2 in range(0,len(list)):
+        if int(list[num1]) == int(list[num2]) and (num1-num2) > 0:
+            output.append(num1-num2)
+            break
+print("THE minemum distance between to simlar num: :  ",min(output))
