@@ -1,0 +1,11 @@
+from collections import Counter
+ar = [20,30,30,30,30,30,20,50,60,60]
+x=Counter(ar)
+y=list(x.values())
+y.sort()
+z=y[-1]
+if (z%2==0):
+    print("the number of pairs is :",z)
+else :
+    z=z-1
+    print("the number of pairs is :",z)
