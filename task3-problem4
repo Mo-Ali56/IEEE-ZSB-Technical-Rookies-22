@@ -12,4 +12,4 @@ for t in x:
     if (x[t]==counter1):
         c=t
         break
-print("there are many types have a frequency of:  ",counter1 ,"  the lower of those is type is: ",c)
+print("there are many types have a frequency of:  ",counter1 ,"  the lower of those typeس is: ",c)
