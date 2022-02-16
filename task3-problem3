@@ -1,0 +1,17 @@
+arr=[1,3,5,7,9]
+y=5  
+#value lower highter 
+lower=0
+higher=len(arr)-1
+while (lower<=higher):
+    mid=(lower+higher) //2
+    if arr[mid]==y:
+        x=mid
+        break
+    if (arr[mid]<y) :
+        lower=mid+1
+    if (arr[mid]>y) :
+        higher=mid-1   
+           
+        
+print("the index place with binary search is :   ",x)    
