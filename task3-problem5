@@ -1,0 +1,14 @@
+from collections import Counter
+ar = [20,20,20,30,30,30,30,30,20,50,60,60]
+x=Counter(ar)
+t=0
+y=list(x.values())
+y.sort() 
+z=[]
+for i in y:
+    if i % 2==0:
+        z.append(i)
+    else :
+        i=i-1
+        z.append(i)
+print("number of pairs is :  ",sum(z)/2)        
