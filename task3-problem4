@@ -1,0 +1,15 @@
+from collections import Counter
+ar = [10,20,20,30,30,40,40,40,50,50,50,60,60,60,60,70,70,70,70]
+x=Counter(ar)
+print("write the frequency from 1 to 4")
+counter1=int(input())
+c=0
+print(x)
+for i in x:
+    if (x[i]==counter1):
+        counter1 = x[i]
+for t in x:
+    if (x[t]==counter1):
+        c=t
+        break
+print("there are many types have a frequency of:  ",counter1 ,"  the lower of those is type is: ",c)
