@@ -1,0 +1,14 @@
+import random
+import string
+x = list(string.ascii_letters + string.digits+"@#$%&*")
+y=list("@#$%&*")
+z=list(string.digits)
+password=[]
+for i in range (0,8):
+    password.append(random.choice(x))
+password.append(random.choice(y))
+password.append(random.choice(z))
+random.shuffle(password)
+print("Your password is:")
+for i in range (0,10):
+    print(password[i], end="")
