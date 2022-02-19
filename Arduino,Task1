@@ -1,17 +1,25 @@
+int motor1pin1=5;
+int motor1pin2=6;
+int motorspeed=3;
+int motor2pin1=9;
+int motor2pin2=11;
+int motor2speed=10;
+
 void setup() {
-  pinMode(6,OUTPUT);
-  pinMode(7,OUTPUT);
-  pinMode(8,OUTPUT);
-  pinMode(9,OUTPUT);
-  pinMode(10,OUTPUT);
-  pinMode(11,OUTPUT);
+  
+  pinMode(motor1pin1,OUTPUT);
+  pinMode(motor1pin2,OUTPUT);
+  pinMode(motorspeed,OUTPUT);
+  pinMode(motor2pin1,OUTPUT);
+  pinMode(motor2pin2,OUTPUT);
+  pinMode(motor2speed,OUTPUT);
 }
 
 void loop() {
- digitalWrite(6,1);
-  digitalWrite(7,0);
-  analogWrite(8,100);
-  digitalWrite(9,0);
-  digitalWrite(10,1);
-  analogWrite(11,130);
+ digitalWrite(motor1pin1,HIGH);
+  digitalWrite(motor1pin2,LOW);
+  analogWrite(motorspeed,100);
+  digitalWrite(motor2pin1,LOW);
+  digitalWrite(motor2pin2,HIGH);
+  analogWrite(motor2speed,130);
 }
