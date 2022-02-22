@@ -1,0 +1,61 @@
+int m1nr=4;
+int m1pr=5;
+int motor1speed=6;
+int m2pl=1;
+int m2nl=2;
+int motor2speed=3;
+int s1=11;
+int s2=10;
+//digitalWrite(m1nr,HIGH);
+//digitalWrite(m1pr,LOW);
+//digitalWrite(m2pl,LOW);
+//digitalWrite(m2nl,HIGH);
+void setup() {
+  pinMode(m1nr,OUTPUT);
+  pinMode(m1pr,OUTPUT);
+  pinMode(motor1speed,OUTPUT);
+  pinMode(m2pl,OUTPUT);
+  pinMode(m2nl,OUTPUT);
+  pinMode(s1,INPUT);
+  pinMode(s2,INPUT);
+ 
+}
+
+void loop() {
+ if (digitalRead(s1)==0 && digitalRead(s2)==0)
+ {
+  digitalWrite(m1nr,HIGH);
+  digitalWrite(m1pr,LOW);
+  analogWrite(motor1speed,180);
+  digitalWrite(m2pl,LOW);
+  digitalWrite(m2nl,HIGH);
+  analogWrite(motor2speed,180);
+  }
+ if (digitalRead(s1)==0 && digitalRead(s2)==1)
+ {
+  digitalWrite(m1nr,HIGH);
+  digitalWrite(m1pr,LOW);
+  analogWrite(motor1speed,180);
+  digitalWrite(m2pl,HIGH);
+  digitalWrite(m2nl,LOW);
+  analogWrite(motor2speed,180);
+  }
+ if (digitalRead(s1)==1 && digitalRead(s2)==0)
+ {
+  digitalWrite(m1nr,LOW);
+  digitalWrite(m1pr,HIGH);
+  analogWrite(motor1speed,180);
+  digitalWrite(m2pl,LOW);
+  digitalWrite(m2nl,HIGH);
+  analogWrite(motor2speed,180);
+  } 
+ if (digitalRead(s1)==1 && digitalRead(s2)==1)
+ {
+  digitalWrite(m1nr,LOW);
+  digitalWrite(m1pr,LOW);
+  analogWrite(motor1speed,180);
+  digitalWrite(m2pl,LOW);
+  digitalWrite(m2nl,LOW);
+  analogWrite(motor2speed,180);
+  }   
+}
