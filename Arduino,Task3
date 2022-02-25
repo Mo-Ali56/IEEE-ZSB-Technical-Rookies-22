@@ -1,0 +1,105 @@
+int rightmotor=7;
+int rightmotor2=8;
+int rightspeed=9;
+int leftspeed=3;
+int leftmotor=5;
+int leftmotor2=6;
+char read0 ='S';
+void setup() {
+  pinMode(rightmotor,OUTPUT);
+  pinMode(rightmotor2,OUTPUT);
+  pinMode(rightspeed,OUTPUT);
+  pinMode(leftspeed,OUTPUT);
+  pinMode(leftmotor,OUTPUT);
+  pinMode(leftmotor2,OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if(Serial.available()>0)
+  {
+   read0=Serial.read();
+  
+  switch (read0)
+  {
+    
+    case 'F': // MOVE FORWARED
+    digitalWrite(rightmotor,HIGH);
+    digitalWrite(rightmotor2,LOW);
+    analogWrite(rightspeed,255);
+    digitalWrite(leftmotor,HIGH);
+    digitalWrite(leftmotor2,LOW);
+    analogWrite(leftspeed,255);
+    break;
+    case 'B': // MOVE BACK
+    digitalWrite(rightmotor,LOW);
+    digitalWrite(rightmotor2,HIGH);
+    analogWrite(rightspeed,255);
+    digitalWrite(leftmotor,LOW);
+    digitalWrite(leftmotor2,HIGH);
+    analogWrite(leftspeed,255);
+    break;
+
+    case 'R': //MOVE RIGHT
+    digitalWrite(rightmotor,LOW);
+    digitalWrite(rightmotor2,HIGH);
+    analogWrite(rightspeed,255);
+    digitalWrite(leftmotor,HIGH);
+    digitalWrite(leftmotor2,LOW);
+    analogWrite(leftspeed,255);
+    break;
+
+    case 'L': // MOVE LEFT
+    digitalWrite(rightmotor,HIGH);
+    digitalWrite(rightmotor2,LOW);
+    analogWrite(rightspeed,255);
+    digitalWrite(leftmotor,LOW);
+    digitalWrite(leftmotor2,HIGH);
+    analogWrite(leftspeed,255);
+    break;
+
+    case 'I': // MOVE FORWARED RIGHT
+    digitalWrite(rightmotor,HIGH);
+    digitalWrite(rightmotor2,LOW);
+    analogWrite(rightspeed,80);
+    digitalWrite(leftmotor,HIGH);
+    digitalWrite(leftmotor2,LOW);
+    analogWrite(leftspeed,255);
+    break;
+
+      case 'G': // MOVE FORWARED LEFT
+    digitalWrite(rightmotor,HIGH);
+    digitalWrite(rightmotor2,LOW);
+    analogWrite(rightspeed,255);
+    digitalWrite(leftmotor,HIGH);
+    digitalWrite(leftmotor2,LOW);
+    analogWrite(leftspeed,80);
+    break;
+
+    case 'J': // MOVE BACK RIGHT
+    digitalWrite(rightmotor,LOW);
+    digitalWrite(rightmotor2,HIGH);
+    analogWrite(rightspeed,80);
+    digitalWrite(leftmotor,LOW);
+    digitalWrite(leftmotor2,HIGH);
+    analogWrite(leftspeed,255);
+    break;
+
+    case 'H': // MOVE BACK LEFT
+    digitalWrite(rightmotor,LOW);
+    digitalWrite(rightmotor2,HIGH);
+    analogWrite(rightspeed,255);
+    digitalWrite(leftmotor,LOW);
+    digitalWrite(leftmotor2,HIGH);
+    analogWrite(leftspeed,80);
+    break;
+
+    case 'S':  // stop
+    digitalWrite(rightmotor,LOW);
+    digitalWrite(rightmotor2,LOW);
+    digitalWrite(leftmotor,LOW);
+    digitalWrite(leftmotor2,LOW);
+    break;
+  }
+  }
+}
