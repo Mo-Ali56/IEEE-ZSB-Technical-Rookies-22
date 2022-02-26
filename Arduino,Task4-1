@@ -1,0 +1,18 @@
+int pir = 6;
+int value;
+void setup() {
+
+pinMode(pir,INPUT);
+Serial.begin(9600);
+}
+
+void loop() {
+value=digitalRead(pir);
+switch(value)
+{  
+ case(1):
+ Serial.println("human dedected");
+ delay(250);
+ break;
+  }
+}
