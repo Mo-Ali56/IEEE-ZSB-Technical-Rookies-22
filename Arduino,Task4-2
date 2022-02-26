@@ -1,0 +1,31 @@
+int trg = 9;
+int eco = 10; 
+int dis=0;
+int timer=0;
+void setup() {
+
+pinMode(trg,OUTPUT);
+pinMode(eco,INPUT);
+Serial.begin(9600);
+}
+
+void loop() {
+  
+digitalWrite(trg,0);
+delayMicroseconds(5);
+digitalWrite(trg,1);
+delayMicroseconds(10);
+digitalWrite(trg,0);
+timer=pulseIn(eco,1);
+dis=timer/57;
+Serial.println(dis);
+if (dis>10)
+{
+  Serial.println("safe");
+  }
+if (dis<10)
+{
+  Serial.println("too close");
+  }
+delay(500);
+}
