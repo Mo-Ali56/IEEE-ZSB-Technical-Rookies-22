@@ -1,0 +1,19 @@
+#include<Servo.h>
+Servo motor;
+int i;
+void setup() {
+ Serial.begin(9600);
+ motor.attach(9);
+}
+
+void loop() {
+  
+  for(i=30;i<=90; i=i+1)
+  {
+    motor.write(i);
+    delay(10);
+    }
+    motor.write(30);
+    delay(1000);
+       
+}
