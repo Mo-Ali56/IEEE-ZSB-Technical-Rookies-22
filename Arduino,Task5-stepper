@@ -1,0 +1,17 @@
+#include<Stepper.h>
+//Stepper Motor with ULN2003 driver 
+int in1=9;
+int in2=10;
+int in3=11;
+int in4=12;
+Stepper stepper(2038,in1,in3,in2,in4);
+void setup() {
+ 
+}
+
+void loop() {
+  stepper.setSpeed(15);
+  stepper.step(2038);
+  stepper.setSpeed(-15);
+  stepper.step(2038);
+}
